@@ -32,3 +32,6 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+rsa_private_key.pem
+rsa_public_key.pem
