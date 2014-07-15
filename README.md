@@ -56,7 +56,7 @@ ruby server -o 0.0.0.0 -p 4567
 
 ### POST /sign 
 
-对HTTP请求参数做符合聚易付规则的RSA数字签名
+对HTTP请求(POST方法)参数做符合聚易付规则的RSA数字签名
 
 如：获得param1=value1&param2＝value2的RSA数字签名(已做过URLEncode)
 
