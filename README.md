@@ -4,10 +4,11 @@ server-example-ruby
 聚易付服务器端示例-Ruby版
 
 # 简介
-本项目包含两个功能示例：
+本示例模拟场景：商户应用为客户端-服务端模式，密钥存放在服务端
+包含两个功能示例：
 
-1. 对HTTP请求参数进行数字签名，使用场景：客户端向服务器请求参数签名(RSA私钥存放在服务端）
-2. 接收聚易付的订单通知
+1. 接收客户端请求，对参数进行数字签名
+2. 接收聚易付的订单通知并反馈
 
 # 运行需求
 
@@ -52,11 +53,11 @@ ruby server -o 监听IP -p 端口
 ruby server -o 0.0.0.0 -p 4567
 ```
 
-### GET /sign 
+### POST /sign 
 
 对HTTP请求参数做符合聚易付规则的RSA数字签名
 
-如：获得param1=value1&param2＝value2的RSA数字签名（已经过urlencode）
+如：获得param1=value1&param2＝value2的RSA数字签名(已做过URLEncode)
 
 ```
 http://ip:4567/sign?param1=value1&param2＝value2
