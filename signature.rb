@@ -1,4 +1,5 @@
 require "openssl"
+require "uri"
 require "base64"
 
 module Mixpay
